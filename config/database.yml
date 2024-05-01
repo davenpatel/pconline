@@ -2,13 +2,19 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= Rails.application.credentials.db![:user] %>
+  password: <%= Rails.application.credentials.db![:password] %>
 
 development:
   <<: *default
+  host: <%= Rails.application.credentials.db![:host] %>
+  port: <%= Rails.application.credentials.db![:port] %>
   database: procare_development
 
 test:
   <<: *default
+  host: <%= ENV.fetch("PROCARE_DATABASE_HOST") %>
+  port: <%= ENV.fetch("PROCARE_DATABASE_PORT") %>
   database: procare_test
 
 production:
