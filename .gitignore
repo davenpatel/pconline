@@ -1,0 +1,8 @@
+/.bundle
+/.yarn
+/log/*
+/node_modules
+/tmp/*
+/vendor
+/vendor/cache
+/yarn-error.log
