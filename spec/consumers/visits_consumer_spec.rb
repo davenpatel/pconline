@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'spec_helper'
+
 RSpec.describe VisitsConsumer do
   subject(:consumer) { karafka.consumer_for(:visits) }
 
@@ -9,7 +11,7 @@ RSpec.describe VisitsConsumer do
       {
         id: SecureRandom.uuid,
         visited_at: Time.zone.now,
-        visitor_id: visitor_id,
+        visitor_id:,
         page_path: '/'
       }
     end

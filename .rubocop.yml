@@ -1,0 +1,15 @@
+require: rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.2
+  Exclude:
+    - "lib/tasks/db.rake"
+    - "db/**/*"
+    - "node_modules/**/*"
+    - "tmp/**/*"
+    - "vendor/**/*"
+    - "bin/*"
+    # TODO: Ignore this file as it may be removed, but leaving it here for
+    #       sanity purposes.
+    - "spec/consumers/attendance_consumer.rb"
+  
