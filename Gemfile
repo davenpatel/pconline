@@ -6,9 +6,9 @@ plugin 'diffend'
 
 gem 'karafka', '>= 2.2.4'
 gem 'karafka-web'
+gem 'pg'
 gem 'puma'
 gem 'rails', '~> 7.0'
-gem 'pg'
 gem 'rubocop'
 gem 'rubocop-rspec'
 
