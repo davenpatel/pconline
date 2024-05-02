@@ -178,5 +178,3 @@ The production deployment pipeline should be configured to work off git tags tha
 Ideally the person who commited a merge request into the main branch and tagged the related commit shouldn't be one of the reviewers for deployment approval.
 
 Reference: [Reviewing Deployments](https://docs.github.com/en/actions/managing-workflow-runs/reviewing-deployments)
-
-## Code/Repository Issues
