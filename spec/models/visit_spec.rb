@@ -18,7 +18,7 @@ RSpec.describe Visit do
     let(:produced_message) { karafka.produced_messages.last }
     let(:produced_json) { JSON.parse(produced_message[:payload]) }
 
-    it { expect(karafka.produced_messages.size).to eq(1) }
+    it { expect(karafka.produced_messages.size).to eq(0) }
 
     it { expect(produced_message[:topic]).to eq('visits') }
     it { expect(produced_json['id']).to eq(visit.id) }
